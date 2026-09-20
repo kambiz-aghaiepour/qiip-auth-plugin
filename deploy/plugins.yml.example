@@ -1,0 +1,11 @@
+# conf/plugins.yml for the qiip repo checkout (the live file is gitignored).
+# Copy next to conf/plugins.yml.example, i.e. conf/plugins.yml.
+plugins:
+  external_dir: /opt/qiip-plugins
+  disabled: []
+  config:
+    auth.google:
+      enabled: false
+    auth.internal_oidc:
+      enabled: true
+      server_metadata_url: https://your-qiip-host.localdomain/oidc/.well-known/openid-configuration

@@ -1,0 +1,13 @@
+[Unit]
+Description=QIIP Toy OIDC provider (local test)
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/qiip-oidc
+ExecStart=/opt/qiip-oidc/.venv/bin/uvicorn app:app --host 127.0.0.1 --port 8081
+Restart=on-failure
+RestartSec=5
+[Install]
+WantedBy=multi-user.target

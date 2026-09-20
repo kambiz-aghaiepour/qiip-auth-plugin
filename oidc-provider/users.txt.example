@@ -1,0 +1,6 @@
+# Example users file for the toy OIDC provider.
+# Copy to /opt/qiip-oidc/users.txt, chmod 0600, and edit before use.
+# Format: username:password   (the configured domain suffix is appended at login)
+# EXAMPLE ONLY — replace these with your own test users.
+user1:user1
+user2:user2
