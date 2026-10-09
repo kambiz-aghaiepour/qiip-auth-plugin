@@ -30,6 +30,7 @@ The provider implements just enough OIDC for qiip's auth plugin:
 |---|---|
 | `auth-plugin/internal_oidc.py` | external qiip auth plugin (copy to the server) |
 | `oidc-provider/app.py` | the toy OIDC provider (FastAPI) |
+| `oidc-provider/qiip.svg` | qiip brand mark served by the login page |
 | `oidc-provider/users.txt.example` | example user store — copy and edit |
 | `oidc-provider/qiip-oidc.service` | systemd unit for the provider |
 | `deploy/plugins.yml.example` | `conf/plugins.yml` for the qiip checkout |
@@ -45,6 +46,7 @@ plugin manager loads external plugins), nginx in front of qiip, and root access.
 ```bash
 sudo install -d -m 0755 -o root -g root /opt/qiip-oidc
 sudo cp oidc-provider/app.py /opt/qiip-oidc/app.py          # root:root 0644
+sudo cp oidc-provider/qiip.svg /opt/qiip-oidc/qiip.svg      # root:root 0644
 sudo python3 -m venv /opt/qiip-oidc/.venv
 sudo /opt/qiip-oidc/.venv/bin/pip install fastapi uvicorn pyjwt cryptography python-multipart
 ```
